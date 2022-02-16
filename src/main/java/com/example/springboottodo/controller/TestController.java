@@ -1,7 +1,11 @@
 package com.example.springboottodo.controller;
 
+import com.example.springboottodo.dto.ResponseDTO;
 import com.example.springboottodo.dto.TestRequestBodyDTO;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("test")
@@ -30,5 +34,10 @@ public class TestController {
     @GetMapping("/testReuqestBody")
     public String testControllerRequestBody(@RequestBody TestRequestBodyDTO testRequestBodyDTO){
         return "Hello World! ID" + testRequestBodyDTO.getId() + "Message:" + testRequestBodyDTO.getMessage();
+    }
+
+    @GetMapping("/testResponseBody")
+    public ResponseDTO<String> testControllerResponseBody(){
+        List<String> list = new ArrayList<>();
     }
 }
