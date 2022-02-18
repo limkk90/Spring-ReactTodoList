@@ -43,4 +43,12 @@ public class TestController {
         ResponseDTO<String> response = ResponseDTO.<String>builder().data(list).build();
         return response;
     }
+
+    @GetMapping("/testResponsehead")
+    public ResponseDTO<String> testControllerResponseHead(){
+        List<String> list = new ArrayList<>();
+        list.add("Hello Head");
+        ResponseDTO<String> responsehead = ResponseDTO.<String>builder().data(list).build();
+        return response;
+    }
 }
