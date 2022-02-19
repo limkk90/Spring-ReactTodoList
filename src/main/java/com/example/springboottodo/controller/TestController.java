@@ -49,6 +49,6 @@ public class TestController {
         List<String> list = new ArrayList<>();
         list.add("Hello Head");
         ResponseDTO<String> responsehead = ResponseDTO.<String>builder().data(list).build();
-        return response;
+        return responsehead;
     }
 }
